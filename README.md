@@ -1,6 +1,10 @@
 # Deep_Learning_Practice_Python
 
 
+
+
+
+# NLP基础
 #词向量：50-300维，有两个策略
 #CBOW模型：由上下文词预测中心词
 #skip-gram模型：由中心词预测上下文词（更常用）
