@@ -21,6 +21,7 @@ NLP
 #还有后向语言模型
 # 双向语言模型（也就是ELMO，基于bi-LSTM,双向LSTM），就是同时包含前向和后向语言模型
 # ELMO的缺点：运行速度
+![Alt Text](images/image_filename.png)
 
 # BERT, Bidirectional Encoder Representations from Transformers
 # 相对于RNN而言（按照顺序处理：会导致前后依赖，梯度消失/爆炸，处理速度受限）
