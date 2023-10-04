@@ -1,4 +1,4 @@
-## Chinese Text Sentiment Analysis — Based on Bag-of-Words Model and Naive Bayes Classifier
+## Chinese Text Sentiment Analysis — Based on Bag-of-Words Model and Naive Bayes Classifier/ KNN Classifier
 
 import numpy as np
 import pandas as pd
@@ -80,3 +80,22 @@ nb_result = nb.predict(X_vec)
 # Add predicted sentiment to the dataframe
 data['nb_result'] = nb_result
 print(data)
+
+
+
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=3) #,weights='distance'
+knn.fit(X_train_vect, y_train)
+train_score = knn.score(X_train_vect, y_train)
+print(train_score)
+X_test_vect = vect.transform(X_test)
+print(knn.score(X_test_vect, y_test))
+
+
+X=data['cut_comment']
+X_vec = vect.transform(X)
+knn_result = knn.predict(X_vec)
+#predict_proba(X)[source] 返回概率
+data['knn_sentiment'] = knn_result
+print(data)
+
